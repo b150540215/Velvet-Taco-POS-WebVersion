@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Index</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../CSS/index_style.css" />
+		<link rel="stylesheet" href="../CSS/customer_style.css" />
+		<link rel="stylesheet" href="../CSS/cart_style.css" />
+		<script src="../JS/weather.js" defer></script>
+		<script src="../JS/item.js" defer></script>
+		<script src="../JS/cart.js" defer></script>
+		<script src="../JS/indexscripts.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../JS/jquery.zoomooz.js"></script>
+		<script src="../JS/jquery.zoomooz.min.js"></script>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html">
+				<img src="velvet_taco_logo.png" alt="Logo" class="logo" />
+			</a>
+			<ul>
+				<li onmouseover="openFontDropdown()" onmouseout="document.getElementById('settingsDropdown').style.display = 'none'">
+					<a href="#" id="settingLink">Settings</a>
+					<div id="settingsDropdown" class="hidden">
+						<div id="google_translate_element"></div>
+						<script type="text/javascript">
+							function googleTranslateElementInit() {
+								new google.translate.TranslateElement(
+									{
+										pageLanguage: "en",
+										layout: google.translate.TranslateElement.InlineLayout.Vertical,
+										autoDisplay: false,
+										gaTrack: false,
+										gaId: "AIzaSyBN6Q6d2lSnOWmHGcuqMQthmHpQ1tOogDw",
+									},
+									"google_translate_element"
+								);
+							}
+						</script>
+						<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+						<label for="fontSizeInput">Font Size:</label>
+						<input type="number" id="fontSizeInput" min="1" value="16" />
+						<button onclick="changeFontSize()" id="applyButton">Apply</button>
+
+						<!-- Zoom buttons in the settingsDropdown -->
+						<button id="zoomIn">Zoom In</button>
+						<button id="zoomOut">Zoom Out</button>
+						<button id="resetZoom">Reset Zoom</button>
+					</div>
+				</li>
+				<li>
+					<a href="#" id="weatherLink">Weather</a>
+					<div id="weatherDropdown" class="hidden"></div>
+				</li>
+				<li>
+					<a href="menuboard.html">Popular Items</a>
+				</li>
+				<li>
+					<a href="https://project-3-client-mrs0.onrender.com/"
+						>Employee Portal</a
+					>
+				</li>
+				<li id="loginButton">
+					<script
+						src="https://accounts.google.com/gsi/client"
+						async
+						defer
+					></script>
+					<div
+						id="g_id_onload"
+						data-client_id="323755602657-lkgjq0r26682lcug3ukmjjss23bs504c.apps.googleusercontent.com"
+						data-callback="handleCredentialResponse"
+					></div>
+					<div
+						class="g_id_signin"
+						data-type="standard"
+						data-shape="rectangular"
+						data-theme="outline"
+						data-text="$ {button.text}"
+						data-size="large"
+					></div>
+				</li>
+				<li id="signOutButton"><a>Sign Out</a></li>
+				<li class="cart-icon">
+					<a href="javascript:void(0);" id="cart-icon-toggle">
+						<img
+							id="cart_img"
+							src="cart_icon.png"
+							alt="Cart"
+							class="cart-icon-img"
+						/>
+					</a>
+				</li>
+				<div id="side-menu" class="hidden">
+					<h2>My Cart</h2>
+					<div id="cart-items"></div>
+					<h3 id="total-price">Total: $0</h3>
+					<button id="clear-cart">Clear Cart</button>
+					<button id="place-order">Place Order</button>
+					<button id="close-side-menu"><span>&larr;</span> Close Cart</button>
+				</div>
+			</ul>
+		</nav>
+		<img
+			src="velvet_taco_banner.jpg"
+			alt="velvet_taco_banner"
+			class="banner-image"
+		/>
+		<div class="welcome-text" id="greeting">Welcome</div>
+		<div class="grid-container" id="categoryContainer"></div>
+	</body>
+</html>

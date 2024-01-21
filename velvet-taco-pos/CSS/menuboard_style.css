@@ -1,0 +1,248 @@
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif, sans-serif;
+	font-size: 15pt;
+	background-color: #d7d7d7;
+}
+
+body > .skiptranslate {
+	display: none;
+}
+
+nav {
+	background-color: #8b1f43;
+	color: white;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Add this line to distribute space between logo and links */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Ensure it's above other content */
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative; /* Added for the underline effect */
+}
+
+nav li {
+	margin: 0 15px;
+	list-style: none;
+	display: inline-block;
+}
+
+nav a:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000; /* Black underline color */
+	position: absolute;
+	bottom: -5px; /* Adjust the distance from the text */
+	left: 50%;
+	transition: width 0.3s ease;
+}
+
+nav li:hover a:after {
+	width: 100%;
+	left: 0;
+}
+
+/* Adjust the padding-top of the body to prevent content from being covered by the fixed menu bar */
+body {
+	padding-top: 60px; /* Adjust the value based on your menu bar height */
+}
+
+.logo {
+	max-height: 100px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	align-items: center; /* Center the links vertically */
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	background-color: #222222;
+	color: white;
+	padding: 50px 50px;
+}
+
+header img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 36px;
+	margin: 15px;
+}
+
+.image-container {
+	position: relative;
+}
+
+.hidden {
+	display: none;
+}
+
+#weatherDropdown {
+	position: absolute;
+	top: 100%;
+	left: 80%; /* Adjust the left position */
+	transform: translateX(-50%); /* Center the dropdown */
+	background: black;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	padding: 10px;
+}
+
+#menuBoard {
+	background-color: #fff;
+	color: #333;
+	padding: 20px;
+	margin: 20px auto;
+	max-width: 800px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menuBoard h2 {
+	text-align: center;
+	color: #8b1f43;
+}
+
+.menu-section h3 {
+	color: #222;
+	border-bottom: 1px solid #d7d7d7;
+	padding-bottom: 10px;
+}
+
+.menu-items {
+	list-style: none;
+	padding: 0;
+}
+
+.menu-items li {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+#settingsDropdown {
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	text-align: center;
+}
+
+#settingsDropdown button {
+	width: 100%;
+	padding: 3px 16px;
+	text-align: center;
+}
+
+#fontDropdownContent {
+	display: none;
+	padding: 20px;
+}
+
+#fontSizeInput {
+	width: 50px;
+}
+
+#settingsDropdown label {
+	color: black;
+}
+
+#settingsDropdown.show {
+	display: block;
+}
+
+#signOutButton {
+	display: none;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns of equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.grid-item {
+    position: relative; /* Needed for absolute positioning of child elements */
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-content {
+    position: absolute;
+    bottom: 10px; /* Position text at the bottom */
+    left: 50%; /* Center text horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    width: auto; /* Let width be determined by content size */
+    max-width: 90%; /* Ensure it doesn't get too wide */
+    text-align: center; /* Center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    color: white;
+    padding: 8px; /* Increase padding for better visibility */
+    font-size: 1.2em; /* Increase font size for readability */
+    border-radius: 4px; /* Optional, for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional, for added depth */
+}
+
+.grid-item:visited {
+	color: inherit; /* Inherit the text color for visited links */
+}
+
+.grid-item:active {
+	color: purple; /* Set the text color to purple when clicked */
+}
+
+/* Ensure each item maintains a square shape while being responsive */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+.order-now-button {
+    background-color: #8b1f43; /* Your theme color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 20px auto; /* Center the button with automatic horizontal margins */
+    display: block; /* Make the button a block element */
+    text-align: center;
+}
+
+.order-now-button:hover {
+    background-color: #a63d57; /* Darker shade for hover effect */
+}

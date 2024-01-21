@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menu Board</title>
+		<link rel="stylesheet" href="../CSS/menuboard_style.css" />
+		<script src="../JS/indexscripts.js" defer></script>
+		<script src="../JS/weather.js" defer></script>
+		<script src="../JS/menuBoard.js" defer></script>
+		<style>
+			#google_translate_element {
+			  display: none;
+			}
+		  </style>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html">
+				<img src="velvet_taco_logo.png" alt="Logo" class="logo" />
+			</a>
+			<ul>
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement(
+							{
+								pageLanguage: "en",
+								layout: google.translate.TranslateElement.InlineLayout.Vertical,
+								autoDisplay: false,
+								gaTrack: false,
+								gaId: "AIzaSyBN6Q6d2lSnOWmHGcuqMQthmHpQ1tOogDw",
+							},
+							"google_translate_element"
+						);
+					}
+				</script>
+				<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+				<li>
+					<a href="index.html">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+
+		<main>
+			<!-- Mini Pop-up -->
+			<!-- <div id="popup" class="popup">
+				<span class="popup-close" onclick="closePopup()">X</span>
+				<div id="popup-content"></div>
+			</div> -->
+			<div id="menuBoard">
+				<div class="menu-section">
+					<h3>Seasonal</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsSeasonal"></div>
+						<!-- Dessert items will be added here dynamically -->
+					</ul>
+				</div>
+
+				<div class="menu-section">
+					<h3>Breakfast</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsBreakfast"></div>
+						<!-- Dessert items will be added here dynamically -->
+					</ul>
+				</div>
+				<!-- Existing Breakfast Section -->
+				<div class="menu-section">
+					<h3>Pork</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsPig"></div>
+						<!-- Add more items here -->
+					</ul>
+				</div>
+
+
+				<div class="menu-section">
+					<h3>Chicken</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsChicken"></div>
+					</ul>
+				</div>
+	
+				<!-- New Beef Section -->
+				<div class="menu-section">
+					<h3>Beef</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsBeef"></div>
+					</ul>
+				</div>
+	
+				<!-- New Veg Section -->
+				<div class="menu-section">
+					<h3>Veg</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsVeg"></div>
+					</ul>
+				</div>
+
+				<div class="menu-section">
+					<h3>Kid</h3>
+					<ul class="menu-items">
+						<div class="grid-container" id="menuItemsKid"></div>
+					</ul>
+				</div>
+			</div>
+		</main>
+
+		<!-- Script to Load Menu Items -->
+		<script></script>
+	</body>
+</html>

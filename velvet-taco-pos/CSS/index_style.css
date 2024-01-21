@@ -1,0 +1,177 @@
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif, sans-serif;
+	font-size: 15pt;
+	background-color: #d7d7d7;
+}
+
+body > .skiptranslate {
+	display: none;
+}
+
+nav {
+	background-color: #8b1f43;
+	color: white;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Add this line to distribute space between logo and links */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Ensure it's above other content */
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative; /* Added for the underline effect */
+}
+
+nav li {
+	margin: 0 15px;
+	list-style: none;
+	display: inline-block;
+}
+
+nav a:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000; /* Black underline color */
+	position: absolute;
+	bottom: -5px; /* Adjust the distance from the text */
+	left: 50%;
+	transition: width 0.3s ease;
+}
+
+nav li:hover a:after {
+	width: 100%;
+	left: 0;
+}
+
+/* Adjust the padding-top of the body to prevent content from being covered by the fixed menu bar */
+body {
+	padding-top: 60px; /* Adjust the value based on your menu bar height */
+}
+
+.logo {
+	max-height: 100px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	align-items: center; /* Center the links vertically */
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	background-color: #222222;
+	color: white;
+	padding: 50px 50px;
+}
+
+header img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 36px;
+	margin: 15px;
+}
+
+.image-container {
+	position: relative;
+}
+
+.hidden {
+	display: none;
+}
+
+#weatherDropdown {
+	position: absolute;
+	top: 100%;
+	left: 60%; /* Adjust the left position */
+	transform: translateX(-50%); /* Center the dropdown */
+	background: black;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	padding: 10px;
+}
+
+#settingsDropdown {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+#settingsDropdown button {
+    width: 100%;
+    padding: 3px;
+    text-align: center;
+}
+
+#fontDropdownContent {
+    display: none;
+    padding: 40px;
+}
+
+#fontSizeInput {
+    width: 30px;
+    margin-top: 10px; /* Add margin to the top */
+}
+
+#settingsDropdown label {
+    color: black;
+}
+
+#settingsDropdown.show {
+    display: block;
+}
+
+#signOutButton {
+    display: none;
+}
+
+#greeting {
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 auto;
+    margin-top: -100px;
+    display: block;
+    width: 100%;
+    color: #f8f8f8;
+    font-size: 100px;
+    font-weight: 900;
+    font-family: 'Pacifico', cursive;
+    text-shadow:
+        3px 3px 0px rgba(0, 0, 0, 0.8),
+        -1px -1px 0px rgba(0, 0, 0, 0.8),
+        1px -1px 0px rgba(0, 0, 0, 0.8),
+        -1px 1px 0px rgba(0, 0, 0, 0.8),
+        1px 1px 0px rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+}
+
+li:hover #settingsDropdown {
+    display: block;
+}
+
+
+
+
+

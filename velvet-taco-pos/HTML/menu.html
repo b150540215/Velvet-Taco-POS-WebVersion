@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <script src="../JS/menu.js" defer></script>
+</head>
+    <body>
+    <nav id="menuBar">
+        <ul>
+            <li><a href="order_history.html"><span>Order History</span></a></li>
+            <li><a href="inventory.html" class="active"><span>Inventory</span></a></li>
+            <li><a href="menu.html"><span>Menu</span></a></li>
+            <li><a href="employees.html"><span>Employees</span></a></li>
+            <li><a href="statistics.html"><span>Statistics</span></a></li>
+            <li><a href="cashier.html"><span>Cashier</span></a></li>
+            <li><a href="customer.html"><span>Customer</span></a></li>
+        </ul>
+    </nav>
+
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for items..">
+
+    <!-- Add the buttons for adding and removing entries with fixed positioning -->
+    <div class="button-container">
+        <button class="addEntryButton">Add Entry</button>
+        <button class="updateEntryButton">Update Entry</button> 
+        <button class="removeEntryButton">Remove Entry</button>
+    </div>
+    
+
+    <!-- Add Entry Popup -->
+    <div id="addEntryPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeAddEntryPopup()">&times;</span>
+            <h2>Add Entry</h2>
+            <form id="addEntryForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="calories">Calories:</label>
+                <input type="number" id="calories" name="calories" required>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+                <label for="type">Type:</label>
+                <input type="text" id="type" name="type" required>
+                <label for="type">Ingredients:</label>
+                <input type="text" id="ingredients" placeholder="Ingredients (comma-separated)" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Remove Entry Popup -->
+    <div id="removeEntryPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeRemoveEntryPopup()">&times;</span>
+            <h2>Remove Entry</h2>
+            <form id="removeEntryForm">
+                <label for="removeName">Item Name:</label>
+                <input type="text" id="removeName" name="removeName" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Update Entry Popup -->
+    <div id="updateEntryPopup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closeUpdateEntryPopup()">&times;</span>
+            <h2>Update Entry</h2>
+            <form id="updateEntryForm">
+                <label for="updateName">Item Name:</label>
+                <input type="text" id="updateName" name="updateName" required>
+                <label for="updatePrice">Price:</label>
+                <input type="number" id="updatePrice" name="updatePrice" step="0.01" required>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <table id="interactiveTable">
+        <thead id="menuTableHead">
+        </thead>
+        <tbody id="menuTableBody">
+        </tbody>
+    </table>
+
+    <h1>Welcome</h1>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "velvet-taco",
+  "version": "1.0.0",
+  "description": "Point of Sale System for Velvet Taco",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csce-315-331-2023c/project-3-904_04.git"
+  },
+  "author": "Zach Schrag, Andrew Oh, Rock Kanzarkar, Ruiming Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csce-315-331-2023c/project-3-904_04/issues"
+  },
+  "homepage": "https://github.com/csce-315-331-2023c/project-3-904_04#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "pg": "^8.11.3"
+  }
+}

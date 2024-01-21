@@ -1,0 +1,238 @@
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif, sans-serif;
+	font-size: 15pt;
+	background-color: #d7d7d7;
+	padding-top: 120px;
+}
+
+body > .skiptranslate {
+	display: none;
+}
+
+nav {
+	background-color: #8b1f43;
+	color: white;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Add this line to distribute space between logo and links */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000; /* Ensure it's above other content */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cart-icon {
+	margin-left: 50px; /* Push the cart icon to the right */
+	margin-right: 50px;
+}
+
+.cart-icon-img {
+	max-height: 50px; /* Set the maximum height for the cart icon */
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative; /* Added for the underline effect */
+}
+
+nav li {
+	margin: 0 15px;
+	list-style: none;
+	display: inline-block;
+}
+
+nav a:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000; /* Black underline color */
+	position: absolute;
+	bottom: -5px; /* Adjust the distance from the text */
+	left: 50%;
+	transition: width 0.3s ease;
+}
+
+nav li:hover a:after {
+	width: 100%;
+	left: 0;
+}
+
+.logo {
+	max-height: 100px;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	align-items: center; /* Center the links vertically */
+	margin: 0;
+	padding: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	background-color: #d7d7d7;
+	padding: 10px;
+	margin: 5px 100px; /* Add margins on the left and right sides */
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 75px;
+	font-size: 30px;
+	text-align: center;
+
+	text-decoration: none; /* Remove underline */
+	color: inherit; /* Inherit the text color from the parent */
+
+	/* Add these styles for when the links are clicked */
+	transition: color 0.3s;
+	text-decoration: none; /* Remove underline */
+	color: inherit; /* Inherit the text color from the parent */
+
+	/* Additional styles for spacing and shape */
+	margin: 10px; /* Add margin for spacing between grid items */
+	border-radius: 10px; /* Add border-radius for a more square shape */
+
+	/* Add box shadow for a shadow effect */
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+
+	/* Add these styles for when the links are clicked */
+	transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.grid-content {
+	/* Adjust color and opacity as needed */
+	padding: 5px; /* Add some padding around the text */
+	text-shadow: 2px 2px 4px rgb(101, 4, 77);
+	color: white;
+}
+
+.grid-item:visited {
+	color: inherit; /* Inherit the text color for visited links */
+}
+
+.grid-item:hover {
+	text-decoration: none; /* Remove underline on hover */
+	transform: scale(1.1);
+}
+
+.grid-item:active {
+	color: purple; /* Set the text color to purple when clicked */
+}
+
+.back-button {
+	margin: 5px;
+	padding: 5px;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	font-size: 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding-left: 50px;
+	width: 20%;
+}
+
+.back-button:before {
+	content: "\276E"; /* Unicode character for left arrow */
+	margin-right: 5px;
+}
+
+.back-button:hover {
+	color: #000000;
+}
+
+@keyframes grow {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes shrink {
+	from {
+		transform: scale(1);
+		opacity: 1;
+	}
+	to {
+		transform: scale(0);
+		opacity: 0;
+	}
+}
+
+/* Mini Pop-up styles */
+.popup {
+	display: none;
+	position: fixed;
+	top: 20%;
+	left: 38%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(229, 229, 229); /* Your existing background color */
+	padding: 20px;
+	border: 2px solid #8b1f43; /* Your existing border style */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Your existing shadow */
+	z-index: 1000; /* Ensuring it's above other content */
+	animation: grow 0.3s ease forwards;
+
+	/* Set explicit width and height */
+	width: 300px; /* Example width */
+
+	/* Optional: Use max-width and max-height for responsiveness */
+	max-width: 90%; /* Adjust as needed */
+
+	/* Optional: Add overflow handling */
+	overflow: auto; /* This will add scrollbars if content overflows */
+}
+
+.popup.shrink {
+	animation: shrink 0.3s ease forwards;
+}
+.popup-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: #8b1f43; /* Matching the color of the close button to the border */
+	font-weight: bold; /* Making the close button text bold */
+}
+
+.add-to-cart-btn {
+	padding: 10px 20px;
+	background-color: #4caf50; /* Green background */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart-btn:hover {
+	background-color: #45a049; /* Darker green on hover */
+	transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.add-to-cart-btn:active {
+	transform: scale(0.95); /* Slightly shrink when clicked */
+}

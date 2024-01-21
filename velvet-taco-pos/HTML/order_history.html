@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <script src="../JS/order_history.js" defer></script>
+</head>
+<body>
+<nav id="menuBar">
+    <ul>
+        <li><a href="order_history.html"><span>Order History</span></a></li>
+        <li><a href="inventory.html" class="active"><span>Inventory</span></a></li>
+        <li><a href="menu.html"><span>Menu</span></a></li>
+        <li><a href="employees.html"><span>Employees</span></a></li>
+        <li><a href="statistics.html"><span>Statistics</span></a></li>
+        <li><a href="cashier.html"><span>Cashier</span></a></li>
+        <li><a href="customer.html"><span>Customer</span></a></li>
+    </ul>
+</nav>
+
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for items..">
+
+<table id="interactiveTable">
+    <thead id="ordersTableHead">
+    </thead>
+    <tbody id="ordersTableBody">
+    </tbody>
+</table>
+
+</body>
+</html>

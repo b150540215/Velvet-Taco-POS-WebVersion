@@ -1,0 +1,292 @@
+body {
+	background-color: #f8f9fa;
+}
+
+/* Entry Selector */
+.custom-select-width {
+  width: 200;
+}
+
+
+/* Page Not Found */
+.PageNotFound {
+  text-align: center;
+
+}
+
+.refresh-icon {
+  color: white;
+  cursor: pointer;
+	width: 200;
+}
+
+/* Page Not Found */
+.PageNotFound {
+	text-align: center;
+}
+
+.PageNotFound-header {
+	position: absolute;
+	left: 0;
+	top: 0;
+	min-height: 100vh;
+	min-width: 100vw;
+	background-color: #282c34;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	font-weight: bold;
+	color: white;
+}
+
+/* Item Cards */
+.card-link {
+	cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 8rem;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-title {
+  margin: 0;
+}
+
+/* Container for Cashier menu items and cart items */
+.split-container {
+	display: grid;
+	grid-template-columns: 70% 30%;
+}
+
+  .left-side {
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+  }
+
+  .right-side {
+    padding: 20px;
+    /* background-color: #d0d0d0; */
+  }
+
+  .menu-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .menu-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.weareharrison.com/wp-content/uploads/2020/04/nashville-interior.jpg');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+
+  .menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+  }
+
+  .menu-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-quantity-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: black;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .cart-item-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cart-brand-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cart-brand-container img{
+    width: 15%;
+    height: 15%;
+  }
+
+
+  .cart-remove-item {
+    color: red;
+    cursor: pointer;
+    text-decoration: bold;
+  }
+
+  .disabled {
+    color: rgba(255, 0, 0, 0.5);
+    cursor: default;
+    text-decoration: bold;
+  }
+
+  .cart-add-another {
+    color: green;
+    cursor: pointer;
+  }
+
+  .even {
+    /* background-color: rgba(128, 0, 0, 1); */
+    background-color: grey;
+    color: rgba(0, 0, 0, );
+  }
+
+  .odd {
+    background-color: #ccc;
+  }
+
+
+.left-side {
+	padding: 20px;
+	/* background-color: #f0f0f0; */
+}
+
+.right-side {
+	padding: 20px;
+	/* background-color: #d0d0d0; */
+}
+
+.cart-item-container {
+	display: flex;
+	justify-content: space-between;
+	/* Adjust other styles as needed */
+}
+
+/* WarningModal */
+.button-container {
+	display: "flex";
+	justify-content: "space-between";
+	width: "100%";
+	margin-top: "1rem";
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+
+/* Alert when editing cells */
+.alert-container {
+  /* position: fixed; */
+  position: fixed;
+  margin: 0 auto;
+  left: 7%;
+  width: 86%;
+  z-index: 1000;
+}
+
+
+.sort-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles scoped to LoginForm */
+.login-form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login-form-container form {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 400px;
+	width: 100%;
+}
+
+.login-form-container input[type="text"],
+.login-form-container input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.login-form-container input[type="text"]:focus,
+.login-form-container input[type="password"]:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+.login-form-container button {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	background-color: rgb(144, 44, 62);
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.login-form-container button:hover {
+	background-color: rgb(101, 29, 42);
+}
+
+.login-form-container ::placeholder {
+	color: #999;
+}
+.login-form-container .external-link-button {
+	display: block;
+	padding: 10px 15px;
+	margin-top: 15px;
+	text-align: center;
+	text-decoration: none;
+	color: #007bff;
+	border: 1px solid #007bff;
+	border-radius: 4px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-form-container .external-link-button:hover {
+	background-color: #007bff;
+	color: white;
+}
+
+@media (max-width: 600px) {
+	.login-form-container form {
+		width: 90%;
+		margin: 0 auto;
+	}
+}

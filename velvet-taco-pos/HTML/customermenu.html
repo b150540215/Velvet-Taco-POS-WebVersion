@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../CSS/item_style.css" />
+		<link rel="stylesheet" href="../CSS/cart_style.css" />
+		<script src="../JS/customermenu.js" defer></script>
+		<script src="../JS/cart.js" defer></script>
+		<script src="../JS/indexscripts.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="../JS/jquery.zoomooz.js"></script>
+		<script src="../JS/jquery.zoomooz.min.js"></script>
+		<title>Menu</title>
+		<style>
+			#google_translate_element {
+			  display: none;
+			}
+		  </style>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html">
+				<img src="velvet_taco_logo.png" alt="Logo" class="logo" />
+			</a>
+			<ul>
+				<li class="cart-icon">
+					<a href="javascript:void(0);" id="cart-icon-toggle">
+						<img
+							id="cart_img"
+							src="cart_icon.png"
+							alt="Cart"
+							class="cart-icon-img"
+						/>
+					</a>
+				</li>
+				<div id="side-menu" class="hidden">
+					<h2>Your Cart</h2>
+					<div id="cart-items"></div>
+					<h3 id="total-price">Total: $0</h3>
+					<button id="clear-cart">Clear Cart</button>
+					<button id="place-order">Place Order</button>
+					<button id="close-side-menu"><span>&larr;</span> Close Cart</button>
+				</div>
+			</ul>
+		</nav>
+		<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement(
+							{
+								pageLanguage: "en",
+								layout: google.translate.TranslateElement.InlineLayout.Vertical,
+								autoDisplay: false,
+								gaTrack: false,
+								gaId: "AIzaSyBN6Q6d2lSnOWmHGcuqMQthmHpQ1tOogDw",
+							},
+							"google_translate_element"
+						);
+					}
+				</script>
+				<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		<a id="CustomerBackToHome" href="index.html" class="back-button"
+			>Back to Home Page</a
+		>
+		<!-- Buttons underneath the menu bar -->
+
+		<div class="grid-container" id="menuItemsContainer"></div>
+
+		<!-- Mini Pop-up -->
+		<div id="popup" class="popup">
+			<span class="popup-close" onclick="closePopup()">X</span>
+			<div id="popup-content"></div>
+		</div>
+
+		<!-- Rest of your content goes here -->
+	</body>
+</html>

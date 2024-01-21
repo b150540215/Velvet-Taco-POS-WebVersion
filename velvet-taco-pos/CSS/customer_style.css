@@ -1,0 +1,167 @@
+/* customer_style.css */
+
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif, sans-serif;
+	font-size: 15pt;
+	background-color: #d7d7d7;
+    padding-top: 100px;
+}
+
+body > .skiptranslate {
+  display: none;
+}
+
+header {
+	position: relative;
+}
+
+nav {
+    background-color: #8B1F43;
+    color: white;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to distribute space between logo and links */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-icon {
+    margin-left: 50px; /* Push the cart icon to the right */
+    margin-right: 50px;
+}
+
+.cart-icon-img {
+    max-height: 50px; /* Set the maximum height for the cart icon */
+}
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative; /* Added for the underline effect */
+  }
+  
+  nav li {
+    margin: 0 15px;
+    list-style: none;
+    display: inline-block;
+  }
+  
+  nav a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000; /* Black underline color */
+    position: absolute;
+    bottom: -5px; /* Adjust the distance from the text */
+    left: 50%;
+    transition: width 0.3s ease;
+  }
+  
+  nav li:hover a:after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .logo {
+    max-height: 100px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Center the links vertically */
+    margin: 0;
+    padding: 0;
+  }
+
+.banner-container {
+	width: 100%;
+	height: 300px; /* Set the desired height */
+	overflow: hidden;
+}
+
+.banner-image {
+	width: 100%;
+	height: 50%;
+	background-image: url("velvet_taco_banner.jpg");
+	background-position: center;
+}
+
+.welcome-text {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 90px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.grid-container {
+	display: grid;
+  grid-template-columns: repeat(4, auto);
+  background-color: #d7d7d7;
+  padding: 10px;
+  margin: 5px 100px; /* Add margins on the left and right sides */
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	padding: 75px;
+	font-size: 30px;
+	text-align: center;
+
+	text-decoration: none; /* Remove underline */
+	color: inherit; /* Inherit the text color from the parent */
+
+	/* Add these styles for when the links are clicked */
+	transition: color 0.3s;
+	text-decoration: none; /* Remove underline */
+	color: inherit; /* Inherit the text color from the parent */
+
+	/* Additional styles for spacing and shape */
+	margin: 10px; /* Add margin for spacing between grid items */
+	border-radius: 10px; /* Add border-radius for a more square shape */
+
+	/* Add box shadow for a shadow effect */
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+
+	/* Add these styles for when the links are clicked */
+	transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+	transform-origin: center;
+}
+
+.grid-content {
+	/* Adjust color and opacity as needed */
+	padding: 5px; /* Add some padding around the text */
+	text-shadow: 2px 2px 4px rgb(101, 4, 77);
+	color: white;
+}
+
+.grid-item:visited {
+	color: inherit; /* Inherit the text color for visited links */
+}
+
+.grid-item:hover {
+	text-decoration: none; /* Remove underline on hover */
+    transform: scale(1.1);
+}
+
+.grid-item:active {
+	color: purple; /* Set the text color to purple when clicked */
+}
+
